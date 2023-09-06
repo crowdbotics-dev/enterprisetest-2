@@ -26,6 +26,24 @@ function api_v1_bhfh_partial_update(payload) {
 function api_v1_bhfh_destroy(payload) {
   return enterprisetestAPI.delete(`/api/v1/bhfh/${payload.id}/`)
 }
+function api_v1_dfd34_list(payload) {
+  return enterprisetestAPI.get(`/api/v1/dfd34/`)
+}
+function api_v1_dfd34_create(payload) {
+  return enterprisetestAPI.post(`/api/v1/dfd34/`, payload)
+}
+function api_v1_dfd34_retrieve(payload) {
+  return enterprisetestAPI.get(`/api/v1/dfd34/${payload.id}/`)
+}
+function api_v1_dfd34_update(payload) {
+  return enterprisetestAPI.put(`/api/v1/dfd34/${payload.id}/`, payload)
+}
+function api_v1_dfd34_partial_update(payload) {
+  return enterprisetestAPI.patch(`/api/v1/dfd34/${payload.id}/`, payload)
+}
+function api_v1_dfd34_destroy(payload) {
+  return enterprisetestAPI.delete(`/api/v1/dfd34/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return enterprisetestAPI.post(`/api/v1/login/`, payload)
 }
@@ -100,6 +118,12 @@ export const apiService = {
   api_v1_bhfh_update,
   api_v1_bhfh_partial_update,
   api_v1_bhfh_destroy,
+  api_v1_dfd34_list,
+  api_v1_dfd34_create,
+  api_v1_dfd34_retrieve,
+  api_v1_dfd34_update,
+  api_v1_dfd34_partial_update,
+  api_v1_dfd34_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   modules_articles_article_list,
