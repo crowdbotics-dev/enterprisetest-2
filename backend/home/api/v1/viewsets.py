@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Bhfh,Bhfh,Bhfh
-from .serializers import BhfhSerializer,BhfhSerializer,BhfhSerializer
+from home.models import Bhfh,Dfd34,Bhfh,Dfd34,Bhfh,Dfd34
+from .serializers import BhfhSerializer,Dfd34Serializer,BhfhSerializer,Dfd34Serializer,BhfhSerializer,Dfd34Serializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class BhfhViewSet(viewsets.ModelViewSet):
     serializer_class = BhfhSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Bhfh.objects.all()
+
+class Dfd34ViewSet(viewsets.ModelViewSet):
+    serializer_class = Dfd34Serializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Dfd34.objects.all()

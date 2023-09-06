@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Bhfh,Bhfh
+from home.models import Bhfh,Dfd34,Bhfh,Dfd34
 from django.http import HttpRequest
 from django.utils.translation import gettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -80,4 +80,10 @@ class BhfhSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Bhfh
+        fields = "__all__"
+
+class Dfd34Serializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Dfd34
         fields = "__all__"
