@@ -8,6 +8,24 @@ function api_docs_schema_retrieve(payload) {
     params: { lang: payload.lang }
   })
 }
+function api_v1_bhfh_list(payload) {
+  return enterprisetestAPI.get(`/api/v1/bhfh/`)
+}
+function api_v1_bhfh_create(payload) {
+  return enterprisetestAPI.post(`/api/v1/bhfh/`, payload)
+}
+function api_v1_bhfh_retrieve(payload) {
+  return enterprisetestAPI.get(`/api/v1/bhfh/${payload.id}/`)
+}
+function api_v1_bhfh_update(payload) {
+  return enterprisetestAPI.put(`/api/v1/bhfh/${payload.id}/`, payload)
+}
+function api_v1_bhfh_partial_update(payload) {
+  return enterprisetestAPI.patch(`/api/v1/bhfh/${payload.id}/`, payload)
+}
+function api_v1_bhfh_destroy(payload) {
+  return enterprisetestAPI.delete(`/api/v1/bhfh/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return enterprisetestAPI.post(`/api/v1/login/`, payload)
 }
@@ -52,6 +70,12 @@ function rest_auth_user_partial_update(payload) {
 }
 export const apiService = {
   api_docs_schema_retrieve,
+  api_v1_bhfh_list,
+  api_v1_bhfh_create,
+  api_v1_bhfh_retrieve,
+  api_v1_bhfh_update,
+  api_v1_bhfh_partial_update,
+  api_v1_bhfh_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   rest_auth_login_create,
